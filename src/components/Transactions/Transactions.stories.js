@@ -17,14 +17,24 @@ export default {
 
 const Template = (args) => <Transactions {...args} />;
 
-export const Default = Template.bind({});
+export const WithTransactions = Template.bind({});
 
-Default.args = {
+WithTransactions.args = {
   transactions: [
     {
       ...TransactionStories.Default.args.transaction,
       id: 1,
       title: 'Transaction 1',
+    },
+    {
+      ...TransactionStories.Default.args.transaction,
+      id: 2,
+      title: 'Transaction 2',
+    },
+    {
+      ...TransactionStories.Default.args.transaction,
+      id: 3,
+      title: 'Transaction 3',
     },
   ],
 };
