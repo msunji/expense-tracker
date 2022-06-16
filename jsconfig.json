@@ -1,7 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "paths": {
+      "storybook/*": ["../.storybook/*"]
+    }
   },
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.scss", "src/**/*.css"],
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.scss",
+    "src/**/*.css",
+    "./.storybook/*.js"
+  ],
   "exclude": ["node_modules"]
 }
