@@ -24,6 +24,41 @@ const dummyData = [
   },
 ];
 
+export const MockState = {
+  transactions: [
+    {
+      ...Transaction.Default.args.task,
+      id: 1,
+      transactionName: 'Transaction 1',
+      amount: 2000,
+    },
+    {
+      ...Transaction.Default.args.task,
+      id: 2,
+      transactionName: 'Transaction 2',
+      amount: 5000,
+    },
+    {
+      ...Transaction.Default.args.task,
+      id: 3,
+      transactionName: 'Transaction 3',
+      amount: 13000,
+    },
+    {
+      ...Transaction.Default.args.task,
+      id: 4,
+      transactionName: 'Transaction 4',
+      amount: 2400,
+    },
+    {
+      ...Transaction.Default.args.task,
+      id: 5,
+      transactionName: 'Transaction 5',
+      amount: 1000,
+    },
+  ],
+};
+
 export default {
   title: 'Transactions',
   component: Transactions,
@@ -34,6 +69,7 @@ export default {
       </main>
     ),
   ],
+  excludeStories: /.*MockState$/,
 };
 
 const Template = (args) => <Transactions {...args.transactions} />;
@@ -57,7 +93,9 @@ WithTransactions.args = {
 
 WithTransactions.decorators = [
   (Story) => (
-    <TransactionContext.Provider value={{ globalState: dummyData }}>
+    <TransactionContext.Provider
+      value={{ globalState: MockState.transactions }}
+    >
       <Story />
     </TransactionContext.Provider>
   ),
