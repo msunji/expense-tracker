@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { TransactionContext } from 'context/context';
 import { ChevronRightIcon } from '@heroicons/react/solid';
 
 const Transaction = ({ transactionName, amount }) => {
