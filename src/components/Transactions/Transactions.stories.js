@@ -1,8 +1,7 @@
 import React from 'react';
 import Transactions from './Transactions';
-import { withReactContext } from 'storybook-react-context';
 import { TransactionContext } from 'context/context';
-import * as Transaction from 'components/Transaction/Transaction.stories';
+import * as Transaction from '../Transaction/Transaction.stories';
 
 const dummyData = [
   {
@@ -28,60 +27,18 @@ const dummyData = [
 export default {
   title: 'Transactions',
   component: Transactions,
-  argTypes: {
-    variant: {
-      options: ['empty', 'withTransactions'],
-      control: { type: 'radio' },
-    },
-  },
-  decorators: [
-    withReactContext({
-      Context: TransactionContext,
-      initialState: { globalState: [] },
-    }),
-  ],
-  excludeStories: /.*MockedState$/,
 };
 
 const Template = (args) => <Transactions {...args.transactions} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'empty',
   transactions: [],
 };
-
-export const WithTransactions = Template.bind({});
-WithTransactions.parameters = {
-  reactContext: {
-    initialState: {
-      globalState: [],
-    },
-  },
-};
-
-WithTransactions.args = {
-  variant: 'withTransactions',
-  transactions: [
-    {
-      ...Transaction.Default.args.transaction,
-      id: '1',
-      title: 'Transaction 1',
-    },
-    {
-      ...Transaction.Default.args.transaction,
-      id: '2',
-      title: 'Transaction 2',
-    },
-    {
-      ...Transaction.Default.args.transaction,
-      id: '3',
-      title: 'Transaction 3',
-    },
-    {
-      ...Transaction.Default.args.transaction,
-      id: '4',
-      title: 'Transaction 4',
-    },
-  ],
-};
+Default.decorators = [
+  (Story) => (
+    <TransactionContext.Provider value={{ globalState: [] }}>
+      <Story />
+    </TransactionContext.Provider>
+  ),
+];
