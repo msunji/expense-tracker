@@ -1,57 +1,30 @@
 import React from 'react';
 import Transactions from './Transactions';
 import { TransactionContext } from 'context/context';
-import * as Transaction from '../Transaction/Transaction.stories';
-
-const dummyData = [
-  {
-    transactionName: 'Cat food',
-    amount: 1200,
-    type: 'expense',
-    id: 1,
-  },
-  {
-    transactionName: 'Income',
-    amount: 13000,
-    type: 'income',
-    id: 2,
-  },
-  {
-    transactionName: 'Phone bill - June',
-    amount: 1400,
-    type: 'expense',
-    id: 3,
-  },
-];
 
 export const MockState = {
   transactions: [
     {
-      ...Transaction.Default.args.task,
       id: 1,
       transactionName: 'Transaction 1',
       amount: 2000,
     },
     {
-      ...Transaction.Default.args.task,
       id: 2,
       transactionName: 'Transaction 2',
       amount: 5000,
     },
     {
-      ...Transaction.Default.args.task,
       id: 3,
       transactionName: 'Transaction 3',
       amount: 13000,
     },
     {
-      ...Transaction.Default.args.task,
       id: 4,
       transactionName: 'Transaction 4',
       amount: 2400,
     },
     {
-      ...Transaction.Default.args.task,
       id: 5,
       transactionName: 'Transaction 5',
       amount: 1000,
