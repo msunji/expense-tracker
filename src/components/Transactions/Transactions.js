@@ -8,7 +8,7 @@ const EmptyTransactions = () => {
     <div className="mt-20">
       <img
         src={emptyImg}
-        className="max-w-[15rem] mx-auto"
+        className="max-w-[15rem] mx-auto mb-4"
         alt="Illustration of person watering a money tree"
       />
       <p className="text-center text-gray">
