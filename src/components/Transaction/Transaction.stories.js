@@ -1,5 +1,6 @@
 import React from 'react';
 import Transaction from './Transaction';
+import { TransactionContext } from 'context/context';
 
 export default {
   title: 'Transaction',
@@ -11,10 +12,8 @@ const Template = (args) => <Transaction {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  transaction: {
-    transactionName: 'Cat food',
-    amount: 1200,
-    type: 'expense',
-    id: 1,
-  },
+  transactionName: 'Cat food',
+  amount: 1200,
+  type: 'expense',
+  id: '1',
 };
