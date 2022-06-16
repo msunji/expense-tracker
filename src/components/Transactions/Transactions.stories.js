@@ -49,3 +49,16 @@ Default.decorators = [
     </TransactionContext.Provider>
   ),
 ];
+
+export const WithTransactions = Template.bind({});
+WithTransactions.args = {
+  transactions: [],
+};
+
+WithTransactions.decorators = [
+  (Story) => (
+    <TransactionContext.Provider value={{ globalState: dummyData }}>
+      <Story />
+    </TransactionContext.Provider>
+  ),
+];
