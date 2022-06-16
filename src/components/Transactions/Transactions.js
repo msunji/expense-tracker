@@ -24,7 +24,7 @@ const Transactions = () => {
   return (
     <section>
       <div className="flex items-center place-content-between">
-        <h2 className="text-bold text-blue-dark">Transactions</h2>
+        <h1 className="font-bold text-blue-dark text-2xl">Transactions</h1>
         Button goes here
       </div>
 
