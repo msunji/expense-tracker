@@ -35,6 +35,14 @@
         "rules": {
           "import/no-anonymous-default-export": "off"
         }
+      },
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
       }
     ]
   },
@@ -69,7 +77,6 @@
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-webpack5": "^6.5.9",
     "@storybook/manager-webpack5": "^6.5.9",
-    "@storybook/mdx2-csf": "^0.0.3",
     "@storybook/node-logger": "^6.5.9",
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.9",
