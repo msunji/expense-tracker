@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { TransactionContext } from 'context/context';
-import Transaction from '../Transaction/Transaction';
+import Transaction from 'components/Transactions/Transactions';
 import emptyImg from 'assets/img/sammy-money-tree-1.png';
 
 const EmptyTransactions = () => {
