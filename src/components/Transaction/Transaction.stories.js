@@ -6,13 +6,15 @@ export default {
   component: Transaction,
 };
 
-const Template = (args) => <Transaction {...args} />;
+const Template = (args) => <Transaction {...args.transactions} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
-  transactionName: 'Cat food',
-  amount: 1200,
-  type: 'expense',
-  id: '1',
+  transactions: {
+    transactionName: 'Cat food',
+    amount: 1200,
+    type: 'expense',
+    id: '1',
+  },
 };
