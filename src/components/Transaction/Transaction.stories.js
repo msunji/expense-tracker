@@ -22,6 +22,6 @@ Default.args = {
     transactionName: 'Cat food',
     amount: 1200,
     type: 'expense',
-    id: '1',
+    id: 1,
   },
 };
