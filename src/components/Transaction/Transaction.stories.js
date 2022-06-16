@@ -1,6 +1,5 @@
 import React from 'react';
 import Transaction from './Transaction';
-import { TransactionContext } from 'context/context';
 
 export default {
   title: 'Transaction',
