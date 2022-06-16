@@ -19,30 +19,8 @@ const EmptyTransactions = () => {
   );
 };
 
-const dummyData = [
-  {
-    transactionName: 'Cat food',
-    amount: 1200,
-    type: 'expense',
-    id: 1,
-  },
-  {
-    transactionName: 'Income',
-    amount: 13000,
-    type: 'income',
-    id: 2,
-  },
-  {
-    transactionName: 'Phone bill - June',
-    amount: 1400,
-    type: 'expense',
-    id: 3,
-  },
-];
-
 const Transactions = () => {
   const { globalState } = useContext(TransactionContext);
-
   return (
     <section>
       <div className="flex items-center place-content-between mb-8">
