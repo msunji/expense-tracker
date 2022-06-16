@@ -27,6 +27,13 @@ const dummyData = [
 export default {
   title: 'Transactions',
   component: Transactions,
+  decorators: [
+    (Story) => (
+      <main className="mx-auto px-3 max-w-2xl">
+        <Story />
+      </main>
+    ),
+  ],
 };
 
 const Template = (args) => <Transactions {...args.transactions} />;
