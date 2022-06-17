@@ -48,9 +48,6 @@ export default {
 const Template = (args) => <Transactions {...args.transactions} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  transactions: [],
-};
 Default.decorators = [
   (Story) => (
     <TransactionContext.Provider value={{ globalState: [] }}>
@@ -60,10 +57,6 @@ Default.decorators = [
 ];
 
 export const WithTransactions = Template.bind({});
-WithTransactions.args = {
-  transactions: [],
-};
-
 WithTransactions.decorators = [
   (Story) => (
     <TransactionContext.Provider
